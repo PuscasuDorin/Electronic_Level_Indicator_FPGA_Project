@@ -1,0 +1,23 @@
+module req_gen(
+	//input clk  	,
+	//input rst_n	,	
+	//input ack_i ,
+	//input req_i	,
+	output reg req_o
+);
+//reg [31:0] time_pressed;
+//Leg req la 1 si fac citire de pe registrul 0 pe led-uri
+
+assign req_o = 1'b1;
+
+//always @(posedge clk or negedge rst_n)
+//if(~rst_n) req_o <= 1'b0; else
+//if((req_i & ~ack_i)) req_o <= 1'b1; else
+//										 req_o <= 1'b0;
+ 
+//always @(posedge clk or negedge rst_n)
+//if(~rst_n) time_pressed <= 0; else
+//if(req_i) time_pressed <= time_pressed + 1; else
+//					time_pressed <= 0;
+
+endmodule

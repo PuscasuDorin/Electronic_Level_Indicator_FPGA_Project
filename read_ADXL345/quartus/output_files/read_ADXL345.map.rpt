@@ -1,5 +1,5 @@
 Analysis & Synthesis report for read_ADXL345
-Fri Apr 24 10:57:11 2026
+Fri Apr 24 11:24:40 2026
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -49,15 +49,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 24 10:57:11 2026          ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 24 11:24:40 2026          ;
 ; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                      ; read_ADXL345                                   ;
 ; Top-level Entity Name              ; DE10_LITE_Golden_Top                           ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 36                                             ;
-;     Total combinational functions  ; 36                                             ;
-;     Dedicated logic registers      ; 34                                             ;
-; Total registers                    ; 34                                             ;
+; Total logic elements               ; 46                                             ;
+;     Total combinational functions  ; 37                                             ;
+;     Dedicated logic registers      ; 43                                             ;
+; Total registers                    ; 43                                             ;
 ; Total pins                         ; 185                                            ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
@@ -194,20 +194,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                        ;
 +---------------------------------------------+------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 36                                                                           ;
+; Estimated Total logic elements              ; 46                                                                           ;
 ;                                             ;                                                                              ;
-; Total combinational functions               ; 36                                                                           ;
+; Total combinational functions               ; 37                                                                           ;
 ; Logic element usage by number of LUT inputs ;                                                                              ;
-;     -- 4 input functions                    ; 15                                                                           ;
-;     -- 3 input functions                    ; 9                                                                            ;
-;     -- <=2 input functions                  ; 12                                                                           ;
+;     -- 4 input functions                    ; 16                                                                           ;
+;     -- 3 input functions                    ; 8                                                                            ;
+;     -- <=2 input functions                  ; 13                                                                           ;
 ;                                             ;                                                                              ;
 ; Logic elements by mode                      ;                                                                              ;
-;     -- normal mode                          ; 36                                                                           ;
+;     -- normal mode                          ; 37                                                                           ;
 ;     -- arithmetic mode                      ; 0                                                                            ;
 ;                                             ;                                                                              ;
-; Total registers                             ; 34                                                                           ;
-;     -- Dedicated logic registers            ; 34                                                                           ;
+; Total registers                             ; 43                                                                           ;
+;     -- Dedicated logic registers            ; 43                                                                           ;
 ;     -- I/O registers                        ; 0                                                                            ;
 ;                                             ;                                                                              ;
 ; I/O pins                                    ; 185                                                                          ;
@@ -218,9 +218,9 @@ https://fpgasoftware.intel.com/eula.
 ;     -- PLLs                                 ; 1                                                                            ;
 ;                                             ;                                                                              ;
 ; Maximum fan-out node                        ; pll:pll_i|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 36                                                                           ;
-; Total fan-out                               ; 493                                                                          ;
-; Average fan-out                             ; 0.96                                                                         ;
+; Maximum fan-out                             ; 45                                                                           ;
+; Total fan-out                               ; 539                                                                          ;
+; Average fan-out                             ; 1.03                                                                         ;
 +---------------------------------------------+------------------------------------------------------------------------------+
 
 
@@ -229,26 +229,24 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                               ; Entity Name          ; Library Name ;
 +--------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+----------------------+--------------+
-; |DE10_LITE_Golden_Top                ; 36 (0)              ; 34 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 185  ; 0            ; 0          ; |DE10_LITE_Golden_Top                                                             ; DE10_LITE_Golden_Top ; work         ;
+; |DE10_LITE_Golden_Top                ; 37 (0)              ; 43 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 185  ; 0            ; 0          ; |DE10_LITE_Golden_Top                                                             ; DE10_LITE_Golden_Top ; work         ;
 ;    |pll:pll_i|                       ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|pll:pll_i                                                   ; pll                  ; work         ;
 ;       |altpll:altpll_component|      ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|pll:pll_i|altpll:altpll_component                           ; altpll               ; work         ;
 ;          |pll_altpll:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|pll:pll_i|altpll:altpll_component|pll_altpll:auto_generated ; pll_altpll           ; work         ;
-;    |req_gen:req_gen_i|               ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|req_gen:req_gen_i                                           ; req_gen              ; work         ;
+;    |req_gen:req_gen_i|               ; 2 (2)               ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|req_gen:req_gen_i                                           ; req_gen              ; work         ;
 ;    |spi_phy:spi_phy_i|               ; 35 (35)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|spi_phy:spi_phy_i                                           ; spi_phy              ; work         ;
 +--------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                   ;
-+----------------------------------------+---------------------------------------------+
-; Register name                          ; Reason for Removal                          ;
-+----------------------------------------+---------------------------------------------+
-; spi_phy:spi_phy_i|wr_op                ; Stuck at GND due to stuck port data_in      ;
-; req_gen:req_gen_i|LEDS[0..7]           ; Stuck at GND due to stuck port clock_enable ;
-; req_gen:req_gen_i|time_pressed[0..31]  ; Lost fanout                                 ;
-; Total Number of Removed Registers = 41 ;                                             ;
-+----------------------------------------+---------------------------------------------+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; spi_phy:spi_phy_i|wr_op               ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -256,12 +254,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 34    ;
+; Total registers                              ; 43    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 34    ;
+; Number of registers using Asynchronous Clear ; 43    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Clock Enable       ; 24    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -272,7 +270,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
 ; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |DE10_LITE_Golden_Top|spi_phy:spi_phy_i|shift_reg[0]  ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|spi_phy:spi_phy_i|shift_reg[12] ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|spi_phy:spi_phy_i|shift_reg[13] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
 
 
@@ -694,21 +692,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 185                         ;
-; cycloneiii_ff         ; 34                          ;
-;     CLR               ; 18                          ;
-;     ENA CLR           ; 16                          ;
+; cycloneiii_ff         ; 43                          ;
+;     CLR               ; 19                          ;
+;     ENA CLR           ; 24                          ;
 ; cycloneiii_io_obuf    ; 71                          ;
-; cycloneiii_lcell_comb ; 38                          ;
-;     normal            ; 38                          ;
+; cycloneiii_lcell_comb ; 39                          ;
+;     normal            ; 39                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 12                          ;
-;         3 data inputs ; 9                           ;
-;         4 data inputs ; 15                          ;
+;         2 data inputs ; 13                          ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 16                          ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.51                        ;
+; Average LUT depth     ; 0.49                        ;
 +-----------------------+-----------------------------+
 
 
@@ -727,7 +725,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Fri Apr 24 10:56:57 2026
+    Info: Processing started: Fri Apr 24 11:24:28 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off read_ADXL345 -c read_ADXL345
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -979,14 +977,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX5[5]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 76
     Warning (13410): Pin "HEX5[6]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 76
     Warning (13410): Pin "HEX5[7]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 76
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 86
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 86
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 86
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 86
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 86
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 86
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 86
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 86
     Warning (13410): Pin "LEDR[8]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 86
     Warning (13410): Pin "LEDR[9]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 86
     Warning (13410): Pin "VGA_B[0]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 96
@@ -1004,7 +994,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_R[3]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 99
     Warning (13410): Pin "VGA_VS" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 100
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 32 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 8 input pin(s) that do not drive logic
@@ -1016,16 +1005,16 @@ Warning (21074): Design contains 8 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[9]" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 91
     Warning (15610): No output dependent on input pin "GSENSOR_INT[1]" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 106
     Warning (15610): No output dependent on input pin "GSENSOR_INT[2]" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 106
-Info (21057): Implemented 222 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 232 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 17 input pins
     Info (21059): Implemented 97 output pins
     Info (21060): Implemented 71 bidirectional pins
-    Info (21061): Implemented 36 logic cells
+    Info (21061): Implemented 46 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 203 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 195 warnings
     Info: Peak virtual memory: 4875 megabytes
-    Info: Processing ended: Fri Apr 24 10:57:11 2026
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:33
+    Info: Processing ended: Fri Apr 24 11:24:40 2026
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:28
 
 

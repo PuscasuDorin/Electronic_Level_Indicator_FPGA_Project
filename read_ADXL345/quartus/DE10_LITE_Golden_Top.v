@@ -132,14 +132,18 @@ wire c0;
 wire c1;
 
 wire req_o;
+wire req_i;
 wire ack_o;
 wire [7:0] data;
 wire spi_oe_o;
+wire [5:0] addr_i;
 
 assign rst_n = KEY[0];
+assign req_i = KEY[1];
 
 assign GSENSOR_SDI = (spi_oe_o) ? GSENSOR_SDO : 1'bZ;
 
+assign addr_i = SW[5:0];
 //=======================================================
 //  Structural coding
 //=======================================================
@@ -151,7 +155,7 @@ spi_phy spi_phy_i(
 	
 .req_i     	(req_o),
 .rw_ni     	(1),  // 1=read, 0=write
-.addr_i    	(0),
+.addr_i    	(addr_i),
 .wr_data_i 	(0),
 .ack_o     	(ack_o),
 .rd_data_o 	(data),
@@ -167,7 +171,7 @@ req_gen req_gen_i(
 .clk  		(c0),
 .rst_n		(rst_n),
 .ack_i		(ack_o),
-.req_i		(KEY[1]),
+.req_i		(req_i),
 .req_o		(req_o),
 .data			(data),
 .LEDS			({LEDR[7], LEDR[6], LEDR[5], LEDR[4], LEDR[3], LEDR[2], LEDR[1], LEDR[0]})

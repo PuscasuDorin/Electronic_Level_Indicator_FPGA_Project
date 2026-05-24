@@ -20,8 +20,7 @@ begin
 segments = {NO_SEGMENTS{1'b1}};
 
 if(~sel_row) segments[sel_column] = UP_PATTERN  ; else
-						 segments[sel_column] = DOWN_PATTERN;		
-						 
+						 segments[sel_column] = DOWN_PATTERN;								 
 end
 
 always @(posedge clk or negedge rst_n)

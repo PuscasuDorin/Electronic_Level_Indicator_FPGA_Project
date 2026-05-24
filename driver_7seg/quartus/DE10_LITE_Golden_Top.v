@@ -150,7 +150,7 @@ driver_7seg #(
 ); 
 
 ck_div #(
-.TIMER_LIMIT (STEP_DELAY_S)
+.STEP_DELAY_S (STEP_DELAY_S)
 ) i_ck_div (  
 .clk   (MAX10_CLK1_50),
 .rst_n (KEY[0])		    ,

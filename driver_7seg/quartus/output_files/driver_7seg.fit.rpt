@@ -1,5 +1,5 @@
 Fitter report for driver_7seg
-Mon Mar 23 21:07:04 2026
+Thu May 21 17:27:16 2026
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -67,14 +67,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Mon Mar 23 21:07:04 2026          ;
+; Fitter Status                      ; Successful - Thu May 21 17:27:16 2026          ;
 ; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                      ; driver_7seg                                    ;
 ; Top-level Entity Name              ; DE10_LITE_Golden_Top                           ;
 ; Family                             ; MAX 10                                         ;
 ; Device                             ; 10M50DAF484C6GES                               ;
 ; Timing Models                      ; Preliminary                                    ;
-; Total logic elements               ; 109 / 49,760 ( < 1 % )                         ;
+; Total logic elements               ; 110 / 49,760 ( < 1 % )                         ;
 ;     Total combinational functions  ; 82 / 49,760 ( < 1 % )                          ;
 ;     Dedicated logic registers      ; 79 / 49,760 ( < 1 % )                          ;
 ; Total registers                    ; 79                                             ;
@@ -153,12 +153,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.07        ;
+; Average used               ; 1.08        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-12        ;   0.6%      ;
+;     Processors 2-12        ;   0.7%      ;
 +----------------------------+-------------+
 
 
@@ -200,7 +200,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/output_files/driver_7seg.pin.
+The pin-out file can be found in E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/output_files/driver_7seg.pin.
 
 
 +----------------------------------------------------------------------+
@@ -208,16 +208,16 @@ The pin-out file can be found in E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborat
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Total logic elements                        ; 109 / 49,760 ( < 1 % ) ;
-;     -- Combinational with no register       ; 30                     ;
-;     -- Register only                        ; 27                     ;
-;     -- Combinational with a register        ; 52                     ;
+; Total logic elements                        ; 110 / 49,760 ( < 1 % ) ;
+;     -- Combinational with no register       ; 31                     ;
+;     -- Register only                        ; 28                     ;
+;     -- Combinational with a register        ; 51                     ;
 ;                                             ;                        ;
 ; Logic element usage by number of LUT inputs ;                        ;
 ;     -- 4 input functions                    ; 29                     ;
 ;     -- 3 input functions                    ; 7                      ;
 ;     -- <=2 input functions                  ; 46                     ;
-;     -- Register only                        ; 27                     ;
+;     -- Register only                        ; 28                     ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
 ;     -- normal mode                          ; 51                     ;
@@ -227,7 +227,7 @@ The pin-out file can be found in E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborat
 ;     -- Dedicated logic registers            ; 79 / 49,760 ( < 1 % )  ;
 ;     -- I/O registers                        ; 0 / 1,749 ( 0 % )      ;
 ;                                             ;                        ;
-; Total LABs:  partially or completely used   ; 10 / 3,110 ( < 1 % )   ;
+; Total LABs:  partially or completely used   ; 11 / 3,110 ( < 1 % )   ;
 ; Virtual pins                                ; 0                      ;
 ; I/O pins                                    ; 185 / 360 ( 51 % )     ;
 ;     -- Clock pins                           ; 4 / 8 ( 50 % )         ;
@@ -248,10 +248,10 @@ The pin-out file can be found in E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborat
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )          ;
 ; Impedance control blocks                    ; 0 / 1 ( 0 % )          ;
 ; Average interconnect usage (total/H/V)      ; 0.1% / 0.1% / 0.1%     ;
-; Peak interconnect usage (total/H/V)         ; 1.2% / 1.2% / 1.2%     ;
+; Peak interconnect usage (total/H/V)         ; 1.2% / 1.2% / 1.1%     ;
 ; Maximum fan-out                             ; 79                     ;
 ; Highest non-global fan-out                  ; 79                     ;
-; Total fan-out                               ; 800                    ;
+; Total fan-out                               ; 801                    ;
 ; Average fan-out                             ; 1.23                   ;
 +---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
@@ -265,16 +265,16 @@ The pin-out file can be found in E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborat
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 109 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
-;     -- Combinational with no register       ; 30                    ; 0                              ;
-;     -- Register only                        ; 27                    ; 0                              ;
-;     -- Combinational with a register        ; 52                    ; 0                              ;
+; Total logic elements                        ; 110 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
+;     -- Combinational with no register       ; 31                    ; 0                              ;
+;     -- Register only                        ; 28                    ; 0                              ;
+;     -- Combinational with a register        ; 51                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
 ;     -- 4 input functions                    ; 29                    ; 0                              ;
 ;     -- 3 input functions                    ; 7                     ; 0                              ;
 ;     -- <=2 input functions                  ; 46                    ; 0                              ;
-;     -- Register only                        ; 27                    ; 0                              ;
+;     -- Register only                        ; 28                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
 ;     -- normal mode                          ; 51                    ; 0                              ;
@@ -284,7 +284,7 @@ The pin-out file can be found in E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborat
 ;     -- Dedicated logic registers            ; 79 / 49760 ( < 1 % )  ; 0 / 49760 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 10 / 3110 ( < 1 % )   ; 0 / 3110 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 11 / 3110 ( < 1 % )   ; 0 / 3110 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
 ; I/O pins                                    ; 185                   ; 0                              ;
@@ -302,7 +302,7 @@ The pin-out file can be found in E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborat
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 806                   ; 8                              ;
+;     -- Total Connections                    ; 807                   ; 8                              ;
 ;     -- Registered Connections               ; 187                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
@@ -1246,9 +1246,9 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +--------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-------------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node           ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name                                   ; Entity Name          ; Library Name ;
 +--------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-------------------------------------------------------+----------------------+--------------+
-; |DE10_LITE_Golden_Top                ; 109 (1)     ; 79 (0)                    ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 185  ; 0            ; 30 (1)       ; 27 (0)            ; 52 (0)           ; 0          ; |DE10_LITE_Golden_Top                                 ; DE10_LITE_Golden_Top ; work         ;
-;    |ck_div:i_ck_div|                 ; 55 (55)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 21 (21)      ; 0 (0)             ; 34 (34)          ; 0          ; |DE10_LITE_Golden_Top|ck_div:i_ck_div                 ; ck_div               ; work         ;
-;    |driver_7seg:i_driver_7seg|       ; 46 (46)     ; 42 (42)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 27 (27)           ; 15 (15)          ; 0          ; |DE10_LITE_Golden_Top|driver_7seg:i_driver_7seg       ; driver_7seg          ; work         ;
+; |DE10_LITE_Golden_Top                ; 110 (1)     ; 79 (0)                    ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 185  ; 0            ; 31 (1)       ; 28 (0)            ; 51 (0)           ; 0          ; |DE10_LITE_Golden_Top                                 ; DE10_LITE_Golden_Top ; work         ;
+;    |ck_div:i_ck_div|                 ; 55 (55)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 23 (23)      ; 0 (0)             ; 32 (32)          ; 0          ; |DE10_LITE_Golden_Top|ck_div:i_ck_div                 ; ck_div               ; work         ;
+;    |driver_7seg:i_driver_7seg|       ; 45 (45)     ; 42 (42)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 28 (28)           ; 14 (14)          ; 0          ; |DE10_LITE_Golden_Top|driver_7seg:i_driver_7seg       ; driver_7seg          ; work         ;
 ;    |move_in_circle:i_move_in_circle| ; 9 (9)       ; 5 (5)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 5 (5)            ; 0          ; |DE10_LITE_Golden_Top|move_in_circle:i_move_in_circle ; move_in_circle       ; work         ;
 +--------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -1590,30 +1590,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - ck_div:i_ck_div|counter[30]                   ; 0                 ; 6       ;
 ;      - ck_div:i_ck_div|counter[29]                   ; 0                 ; 6       ;
 ;      - ck_div:i_ck_div|counter[28]                   ; 0                 ; 6       ;
-;      - ck_div:i_ck_div|counter[24]                   ; 0                 ; 6       ;
+;      - ck_div:i_ck_div|counter[25]                   ; 0                 ; 6       ;
 ;      - ck_div:i_ck_div|counter[27]                   ; 0                 ; 6       ;
 ;      - ck_div:i_ck_div|counter[26]                   ; 0                 ; 6       ;
-;      - ck_div:i_ck_div|counter[25]                   ; 0                 ; 6       ;
+;      - ck_div:i_ck_div|counter[24]                   ; 0                 ; 6       ;
+;      - ck_div:i_ck_div|counter[23]                   ; 0                 ; 6       ;
 ;      - ck_div:i_ck_div|counter[22]                   ; 0                 ; 6       ;
 ;      - ck_div:i_ck_div|counter[21]                   ; 0                 ; 6       ;
 ;      - ck_div:i_ck_div|counter[20]                   ; 0                 ; 6       ;
-;      - ck_div:i_ck_div|counter[23]                   ; 0                 ; 6       ;
 ;      - ck_div:i_ck_div|counter[19]                   ; 0                 ; 6       ;
+;      - ck_div:i_ck_div|counter[17]                   ; 0                 ; 6       ;
 ;      - ck_div:i_ck_div|counter[18]                   ; 0                 ; 6       ;
 ;      - ck_div:i_ck_div|counter[16]                   ; 0                 ; 6       ;
-;      - ck_div:i_ck_div|counter[17]                   ; 0                 ; 6       ;
+;      - ck_div:i_ck_div|counter[15]                   ; 0                 ; 6       ;
 ;      - ck_div:i_ck_div|counter[14]                   ; 0                 ; 6       ;
 ;      - ck_div:i_ck_div|counter[13]                   ; 0                 ; 6       ;
 ;      - ck_div:i_ck_div|counter[12]                   ; 0                 ; 6       ;
-;      - ck_div:i_ck_div|counter[15]                   ; 0                 ; 6       ;
-;      - ck_div:i_ck_div|counter[11]                   ; 0                 ; 6       ;
 ;      - ck_div:i_ck_div|counter[9]                    ; 0                 ; 6       ;
 ;      - ck_div:i_ck_div|counter[8]                    ; 0                 ; 6       ;
+;      - ck_div:i_ck_div|counter[11]                   ; 0                 ; 6       ;
 ;      - ck_div:i_ck_div|counter[10]                   ; 0                 ; 6       ;
+;      - ck_div:i_ck_div|counter[6]                    ; 0                 ; 6       ;
 ;      - ck_div:i_ck_div|counter[5]                    ; 0                 ; 6       ;
 ;      - ck_div:i_ck_div|counter[4]                    ; 0                 ; 6       ;
 ;      - ck_div:i_ck_div|counter[7]                    ; 0                 ; 6       ;
-;      - ck_div:i_ck_div|counter[6]                    ; 0                 ; 6       ;
 ;      - ck_div:i_ck_div|counter[3]                    ; 0                 ; 6       ;
 ;      - ck_div:i_ck_div|counter[2]                    ; 0                 ; 6       ;
 ;      - ck_div:i_ck_div|counter[1]                    ; 0                 ; 6       ;
@@ -1637,7 +1637,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name          ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; MAX10_CLK1_50 ; PIN_P11  ; 79      ; 2                                    ; Global Clock         ; GCLK19           ; --                        ;
+; MAX10_CLK1_50 ; PIN_P11  ; 79      ; 5                                    ; Global Clock         ; GCLK19           ; --                        ;
 +---------------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -1646,38 +1646,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 126 / 148,641 ( < 1 % ) ;
+; Block interconnects   ; 129 / 148,641 ( < 1 % ) ;
 ; C16 interconnects     ; 9 / 5,382 ( < 1 % )     ;
-; C4 interconnects      ; 76 / 106,704 ( < 1 % )  ;
-; Direct links          ; 50 / 148,641 ( < 1 % )  ;
+; C4 interconnects      ; 68 / 106,704 ( < 1 % )  ;
+; Direct links          ; 44 / 148,641 ( < 1 % )  ;
 ; Global clocks         ; 1 / 20 ( 5 % )          ;
-; Local interconnects   ; 61 / 49,760 ( < 1 % )   ;
+; Local interconnects   ; 58 / 49,760 ( < 1 % )   ;
 ; NSLEEPs               ; 0 / 500 ( 0 % )         ;
-; R24 interconnects     ; 9 / 5,406 ( < 1 % )     ;
-; R4 interconnects      ; 53 / 147,764 ( < 1 % )  ;
+; R24 interconnects     ; 12 / 5,406 ( < 1 % )    ;
+; R4 interconnects      ; 79 / 147,764 ( < 1 % )  ;
 +-----------------------+-------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 10.90) ; Number of LABs  (Total = 10) ;
+; Number of Logic Elements  (Average = 10.00) ; Number of LABs  (Total = 11) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 1                            ;
+; 1                                           ; 2                            ;
 ; 2                                           ; 1                            ;
 ; 3                                           ; 0                            ;
-; 4                                           ; 1                            ;
+; 4                                           ; 0                            ;
 ; 5                                           ; 0                            ;
-; 6                                           ; 0                            ;
+; 6                                           ; 1                            ;
 ; 7                                           ; 0                            ;
 ; 8                                           ; 0                            ;
 ; 9                                           ; 0                            ;
-; 10                                          ; 0                            ;
+; 10                                          ; 1                            ;
 ; 11                                          ; 0                            ;
-; 12                                          ; 1                            ;
-; 13                                          ; 0                            ;
-; 14                                          ; 2                            ;
-; 15                                          ; 2                            ;
+; 12                                          ; 0                            ;
+; 13                                          ; 1                            ;
+; 14                                          ; 0                            ;
+; 15                                          ; 3                            ;
 ; 16                                          ; 2                            ;
 +---------------------------------------------+------------------------------+
 
@@ -1685,46 +1685,46 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.80) ; Number of LABs  (Total = 10) ;
+; LAB-wide Signals  (Average = 1.82) ; Number of LABs  (Total = 11) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 9                            ;
-; 1 Clock                            ; 9                            ;
+; 1 Async. clear                     ; 10                           ;
+; 1 Clock                            ; 10                           ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 18.80) ; Number of LABs  (Total = 10) ;
+; Number of Signals Sourced  (Average = 17.18) ; Number of LABs  (Total = 11) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 1                            ;
-; 2                                            ; 0                            ;
+; 2                                            ; 1                            ;
 ; 3                                            ; 0                            ;
 ; 4                                            ; 1                            ;
 ; 5                                            ; 0                            ;
 ; 6                                            ; 0                            ;
-; 7                                            ; 1                            ;
+; 7                                            ; 0                            ;
 ; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
 ; 10                                           ; 0                            ;
 ; 11                                           ; 0                            ;
-; 12                                           ; 0                            ;
+; 12                                           ; 1                            ;
 ; 13                                           ; 0                            ;
 ; 14                                           ; 0                            ;
-; 15                                           ; 0                            ;
+; 15                                           ; 1                            ;
 ; 16                                           ; 0                            ;
 ; 17                                           ; 0                            ;
 ; 18                                           ; 0                            ;
 ; 19                                           ; 0                            ;
-; 20                                           ; 0                            ;
+; 20                                           ; 1                            ;
 ; 21                                           ; 0                            ;
-; 22                                           ; 1                            ;
-; 23                                           ; 2                            ;
+; 22                                           ; 0                            ;
+; 23                                           ; 0                            ;
 ; 24                                           ; 1                            ;
 ; 25                                           ; 1                            ;
 ; 26                                           ; 0                            ;
-; 27                                           ; 0                            ;
+; 27                                           ; 1                            ;
 ; 28                                           ; 0                            ;
 ; 29                                           ; 1                            ;
 ; 30                                           ; 1                            ;
@@ -1734,43 +1734,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 9.90) ; Number of LABs  (Total = 10) ;
+; Number of Signals Sourced Out  (Average = 9.45) ; Number of LABs  (Total = 11) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 1                            ;
+; 1                                               ; 2                            ;
 ; 2                                               ; 1                            ;
 ; 3                                               ; 0                            ;
-; 4                                               ; 1                            ;
+; 4                                               ; 0                            ;
 ; 5                                               ; 0                            ;
-; 6                                               ; 0                            ;
+; 6                                               ; 1                            ;
 ; 7                                               ; 0                            ;
-; 8                                               ; 0                            ;
-; 9                                               ; 1                            ;
-; 10                                              ; 1                            ;
+; 8                                               ; 2                            ;
+; 9                                               ; 0                            ;
+; 10                                              ; 0                            ;
 ; 11                                              ; 0                            ;
-; 12                                              ; 2                            ;
+; 12                                              ; 0                            ;
 ; 13                                              ; 0                            ;
-; 14                                              ; 0                            ;
+; 14                                              ; 1                            ;
 ; 15                                              ; 1                            ;
-; 16                                              ; 1                            ;
-; 17                                              ; 0                            ;
-; 18                                              ; 1                            ;
+; 16                                              ; 2                            ;
+; 17                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 8.70) ; Number of LABs  (Total = 10) ;
+; Number of Distinct Inputs  (Average = 8.36) ; Number of LABs  (Total = 11) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
 ; 1                                           ; 0                            ;
 ; 2                                           ; 0                            ;
-; 3                                           ; 0                            ;
-; 4                                           ; 1                            ;
+; 3                                           ; 1                            ;
+; 4                                           ; 0                            ;
 ; 5                                           ; 1                            ;
-; 6                                           ; 3                            ;
-; 7                                           ; 0                            ;
+; 6                                           ; 2                            ;
+; 7                                           ; 2                            ;
 ; 8                                           ; 1                            ;
 ; 9                                           ; 0                            ;
 ; 10                                          ; 1                            ;
@@ -1782,10 +1781,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 16                                          ; 0                            ;
 ; 17                                          ; 0                            ;
 ; 18                                          ; 0                            ;
-; 19                                          ; 0                            ;
-; 20                                          ; 1                            ;
-; 21                                          ; 0                            ;
-; 22                                          ; 1                            ;
+; 19                                          ; 1                            ;
+; 20                                          ; 0                            ;
+; 21                                          ; 1                            ;
 +---------------------------------------------+------------------------------+
 
 
@@ -2108,7 +2106,7 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node MAX10_CLK1_50~input (placed in PIN P11 (CLK7p, DIFFIO_TX_RX_B20p, DIFFOUT_B20p, High_Speed)) File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 37
+Info (176353): Automatically promoted node MAX10_CLK1_50~input (placed in PIN P11 (CLK7p, DIFFIO_TX_RX_B20p, DIFFOUT_B20p, High_Speed)) File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 37
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G19
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -2126,186 +2124,186 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.36 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.41 seconds.
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:03
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (169177): 88 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing MAX 10 Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
-    Info (169178): Pin ADC_CLK_10 uses I/O standard 3.3-V LVTTL at N5 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 33
-    Info (169178): Pin MAX10_CLK2_50 uses I/O standard 3.3-V LVTTL at N14 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 41
-    Info (169178): Pin KEY[1] uses I/O standard 3.3 V Schmitt Trigger at A7 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 81
-    Info (169178): Pin SW[0] uses I/O standard 3.3-V LVTTL at C10 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 91
-    Info (169178): Pin SW[1] uses I/O standard 3.3-V LVTTL at C11 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 91
-    Info (169178): Pin SW[2] uses I/O standard 3.3-V LVTTL at D12 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 91
-    Info (169178): Pin SW[3] uses I/O standard 3.3-V LVTTL at C12 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 91
-    Info (169178): Pin SW[4] uses I/O standard 3.3-V LVTTL at A12 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 91
-    Info (169178): Pin SW[5] uses I/O standard 3.3-V LVTTL at B12 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 91
-    Info (169178): Pin SW[6] uses I/O standard 3.3-V LVTTL at A13 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 91
-    Info (169178): Pin SW[7] uses I/O standard 3.3-V LVTTL at A14 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 91
-    Info (169178): Pin SW[8] uses I/O standard 3.3-V LVTTL at B14 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 91
-    Info (169178): Pin SW[9] uses I/O standard 3.3-V LVTTL at F15 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 91
-    Info (169178): Pin GSENSOR_INT[1] uses I/O standard 3.3-V LVTTL at Y14 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 106
-    Info (169178): Pin GSENSOR_INT[2] uses I/O standard 3.3-V LVTTL at Y13 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 106
-    Info (169178): Pin DRAM_DQ[0] uses I/O standard 3.3-V LVTTL at Y21 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169178): Pin DRAM_DQ[1] uses I/O standard 3.3-V LVTTL at Y20 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169178): Pin DRAM_DQ[2] uses I/O standard 3.3-V LVTTL at AA22 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169178): Pin DRAM_DQ[3] uses I/O standard 3.3-V LVTTL at AA21 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169178): Pin DRAM_DQ[4] uses I/O standard 3.3-V LVTTL at Y22 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169178): Pin DRAM_DQ[5] uses I/O standard 3.3-V LVTTL at W22 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169178): Pin DRAM_DQ[6] uses I/O standard 3.3-V LVTTL at W20 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169178): Pin DRAM_DQ[7] uses I/O standard 3.3-V LVTTL at V21 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169178): Pin DRAM_DQ[8] uses I/O standard 3.3-V LVTTL at P21 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169178): Pin DRAM_DQ[9] uses I/O standard 3.3-V LVTTL at J22 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169178): Pin DRAM_DQ[10] uses I/O standard 3.3-V LVTTL at H21 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169178): Pin DRAM_DQ[11] uses I/O standard 3.3-V LVTTL at H22 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169178): Pin DRAM_DQ[12] uses I/O standard 3.3-V LVTTL at G22 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169178): Pin DRAM_DQ[13] uses I/O standard 3.3-V LVTTL at G20 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169178): Pin DRAM_DQ[14] uses I/O standard 3.3-V LVTTL at G19 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169178): Pin DRAM_DQ[15] uses I/O standard 3.3-V LVTTL at F22 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169178): Pin GSENSOR_SDI uses I/O standard 3.3-V LVTTL at V11 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 108
-    Info (169178): Pin GSENSOR_SDO uses I/O standard 3.3-V LVTTL at V12 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 109
-    Info (169178): Pin ARDUINO_IO[0] uses I/O standard 3.3-V LVTTL at AB5 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169178): Pin ARDUINO_IO[1] uses I/O standard 3.3-V LVTTL at AB6 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169178): Pin ARDUINO_IO[2] uses I/O standard 3.3-V LVTTL at AB7 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169178): Pin ARDUINO_IO[3] uses I/O standard 3.3-V LVTTL at AB8 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169178): Pin ARDUINO_IO[4] uses I/O standard 3.3-V LVTTL at AB9 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169178): Pin ARDUINO_IO[5] uses I/O standard 3.3-V LVTTL at Y10 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169178): Pin ARDUINO_IO[6] uses I/O standard 3.3-V LVTTL at AA11 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169178): Pin ARDUINO_IO[7] uses I/O standard 3.3-V LVTTL at AA12 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169178): Pin ARDUINO_IO[8] uses I/O standard 3.3-V LVTTL at AB17 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169178): Pin ARDUINO_IO[9] uses I/O standard 3.3-V LVTTL at AA17 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169178): Pin ARDUINO_IO[10] uses I/O standard 3.3-V LVTTL at AB19 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169178): Pin ARDUINO_IO[11] uses I/O standard 3.3-V LVTTL at AA19 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169178): Pin ARDUINO_IO[12] uses I/O standard 3.3-V LVTTL at Y19 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169178): Pin ARDUINO_IO[13] uses I/O standard 3.3-V LVTTL at AB20 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169178): Pin ARDUINO_IO[14] uses I/O standard 3.3-V LVTTL at AB21 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169178): Pin ARDUINO_IO[15] uses I/O standard 3.3-V LVTTL at AA20 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169178): Pin ARDUINO_RESET_N uses I/O standard 3.3-V LVTTL at F16 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 115
-    Info (169178): Pin GPIO[0] uses I/O standard 3.3-V LVTTL at V10 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[1] uses I/O standard 3.3-V LVTTL at W10 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[2] uses I/O standard 3.3-V LVTTL at V9 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[3] uses I/O standard 3.3-V LVTTL at W9 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[4] uses I/O standard 3.3-V LVTTL at V8 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[5] uses I/O standard 3.3-V LVTTL at W8 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[6] uses I/O standard 3.3-V LVTTL at V7 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[7] uses I/O standard 3.3-V LVTTL at W7 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[8] uses I/O standard 3.3-V LVTTL at W6 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[9] uses I/O standard 3.3-V LVTTL at V5 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[10] uses I/O standard 3.3-V LVTTL at W5 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[11] uses I/O standard 3.3-V LVTTL at AA15 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[12] uses I/O standard 3.3-V LVTTL at AA14 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[13] uses I/O standard 3.3-V LVTTL at W13 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[14] uses I/O standard 3.3-V LVTTL at W12 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[15] uses I/O standard 3.3-V LVTTL at AB13 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[16] uses I/O standard 3.3-V LVTTL at AB12 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[17] uses I/O standard 3.3-V LVTTL at Y11 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[18] uses I/O standard 3.3-V LVTTL at AB11 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[19] uses I/O standard 3.3-V LVTTL at W11 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[20] uses I/O standard 3.3-V LVTTL at AB10 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[21] uses I/O standard 3.3-V LVTTL at AA10 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[22] uses I/O standard 3.3-V LVTTL at AA9 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[23] uses I/O standard 3.3-V LVTTL at Y8 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[24] uses I/O standard 3.3-V LVTTL at AA8 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[25] uses I/O standard 3.3-V LVTTL at Y7 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[26] uses I/O standard 3.3-V LVTTL at AA7 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[27] uses I/O standard 3.3-V LVTTL at Y6 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[28] uses I/O standard 3.3-V LVTTL at AA6 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[29] uses I/O standard 3.3-V LVTTL at Y5 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[30] uses I/O standard 3.3-V LVTTL at AA5 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[31] uses I/O standard 3.3-V LVTTL at Y4 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[32] uses I/O standard 3.3-V LVTTL at AB3 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[33] uses I/O standard 3.3-V LVTTL at Y3 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[34] uses I/O standard 3.3-V LVTTL at AB2 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin GPIO[35] uses I/O standard 3.3-V LVTTL at AA2 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169178): Pin MAX10_CLK1_50 uses I/O standard 3.3-V LVTTL at P11 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 37
-    Info (169178): Pin KEY[0] uses I/O standard 3.3 V Schmitt Trigger at B8 File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 81
+    Info (169178): Pin ADC_CLK_10 uses I/O standard 3.3-V LVTTL at N5 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 33
+    Info (169178): Pin MAX10_CLK2_50 uses I/O standard 3.3-V LVTTL at N14 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 41
+    Info (169178): Pin KEY[1] uses I/O standard 3.3 V Schmitt Trigger at A7 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 81
+    Info (169178): Pin SW[0] uses I/O standard 3.3-V LVTTL at C10 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 91
+    Info (169178): Pin SW[1] uses I/O standard 3.3-V LVTTL at C11 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 91
+    Info (169178): Pin SW[2] uses I/O standard 3.3-V LVTTL at D12 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 91
+    Info (169178): Pin SW[3] uses I/O standard 3.3-V LVTTL at C12 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 91
+    Info (169178): Pin SW[4] uses I/O standard 3.3-V LVTTL at A12 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 91
+    Info (169178): Pin SW[5] uses I/O standard 3.3-V LVTTL at B12 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 91
+    Info (169178): Pin SW[6] uses I/O standard 3.3-V LVTTL at A13 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 91
+    Info (169178): Pin SW[7] uses I/O standard 3.3-V LVTTL at A14 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 91
+    Info (169178): Pin SW[8] uses I/O standard 3.3-V LVTTL at B14 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 91
+    Info (169178): Pin SW[9] uses I/O standard 3.3-V LVTTL at F15 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 91
+    Info (169178): Pin GSENSOR_INT[1] uses I/O standard 3.3-V LVTTL at Y14 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 106
+    Info (169178): Pin GSENSOR_INT[2] uses I/O standard 3.3-V LVTTL at Y13 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 106
+    Info (169178): Pin DRAM_DQ[0] uses I/O standard 3.3-V LVTTL at Y21 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169178): Pin DRAM_DQ[1] uses I/O standard 3.3-V LVTTL at Y20 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169178): Pin DRAM_DQ[2] uses I/O standard 3.3-V LVTTL at AA22 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169178): Pin DRAM_DQ[3] uses I/O standard 3.3-V LVTTL at AA21 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169178): Pin DRAM_DQ[4] uses I/O standard 3.3-V LVTTL at Y22 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169178): Pin DRAM_DQ[5] uses I/O standard 3.3-V LVTTL at W22 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169178): Pin DRAM_DQ[6] uses I/O standard 3.3-V LVTTL at W20 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169178): Pin DRAM_DQ[7] uses I/O standard 3.3-V LVTTL at V21 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169178): Pin DRAM_DQ[8] uses I/O standard 3.3-V LVTTL at P21 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169178): Pin DRAM_DQ[9] uses I/O standard 3.3-V LVTTL at J22 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169178): Pin DRAM_DQ[10] uses I/O standard 3.3-V LVTTL at H21 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169178): Pin DRAM_DQ[11] uses I/O standard 3.3-V LVTTL at H22 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169178): Pin DRAM_DQ[12] uses I/O standard 3.3-V LVTTL at G22 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169178): Pin DRAM_DQ[13] uses I/O standard 3.3-V LVTTL at G20 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169178): Pin DRAM_DQ[14] uses I/O standard 3.3-V LVTTL at G19 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169178): Pin DRAM_DQ[15] uses I/O standard 3.3-V LVTTL at F22 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169178): Pin GSENSOR_SDI uses I/O standard 3.3-V LVTTL at V11 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 108
+    Info (169178): Pin GSENSOR_SDO uses I/O standard 3.3-V LVTTL at V12 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 109
+    Info (169178): Pin ARDUINO_IO[0] uses I/O standard 3.3-V LVTTL at AB5 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169178): Pin ARDUINO_IO[1] uses I/O standard 3.3-V LVTTL at AB6 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169178): Pin ARDUINO_IO[2] uses I/O standard 3.3-V LVTTL at AB7 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169178): Pin ARDUINO_IO[3] uses I/O standard 3.3-V LVTTL at AB8 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169178): Pin ARDUINO_IO[4] uses I/O standard 3.3-V LVTTL at AB9 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169178): Pin ARDUINO_IO[5] uses I/O standard 3.3-V LVTTL at Y10 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169178): Pin ARDUINO_IO[6] uses I/O standard 3.3-V LVTTL at AA11 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169178): Pin ARDUINO_IO[7] uses I/O standard 3.3-V LVTTL at AA12 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169178): Pin ARDUINO_IO[8] uses I/O standard 3.3-V LVTTL at AB17 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169178): Pin ARDUINO_IO[9] uses I/O standard 3.3-V LVTTL at AA17 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169178): Pin ARDUINO_IO[10] uses I/O standard 3.3-V LVTTL at AB19 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169178): Pin ARDUINO_IO[11] uses I/O standard 3.3-V LVTTL at AA19 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169178): Pin ARDUINO_IO[12] uses I/O standard 3.3-V LVTTL at Y19 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169178): Pin ARDUINO_IO[13] uses I/O standard 3.3-V LVTTL at AB20 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169178): Pin ARDUINO_IO[14] uses I/O standard 3.3-V LVTTL at AB21 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169178): Pin ARDUINO_IO[15] uses I/O standard 3.3-V LVTTL at AA20 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169178): Pin ARDUINO_RESET_N uses I/O standard 3.3-V LVTTL at F16 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 115
+    Info (169178): Pin GPIO[0] uses I/O standard 3.3-V LVTTL at V10 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[1] uses I/O standard 3.3-V LVTTL at W10 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[2] uses I/O standard 3.3-V LVTTL at V9 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[3] uses I/O standard 3.3-V LVTTL at W9 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[4] uses I/O standard 3.3-V LVTTL at V8 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[5] uses I/O standard 3.3-V LVTTL at W8 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[6] uses I/O standard 3.3-V LVTTL at V7 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[7] uses I/O standard 3.3-V LVTTL at W7 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[8] uses I/O standard 3.3-V LVTTL at W6 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[9] uses I/O standard 3.3-V LVTTL at V5 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[10] uses I/O standard 3.3-V LVTTL at W5 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[11] uses I/O standard 3.3-V LVTTL at AA15 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[12] uses I/O standard 3.3-V LVTTL at AA14 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[13] uses I/O standard 3.3-V LVTTL at W13 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[14] uses I/O standard 3.3-V LVTTL at W12 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[15] uses I/O standard 3.3-V LVTTL at AB13 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[16] uses I/O standard 3.3-V LVTTL at AB12 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[17] uses I/O standard 3.3-V LVTTL at Y11 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[18] uses I/O standard 3.3-V LVTTL at AB11 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[19] uses I/O standard 3.3-V LVTTL at W11 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[20] uses I/O standard 3.3-V LVTTL at AB10 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[21] uses I/O standard 3.3-V LVTTL at AA10 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[22] uses I/O standard 3.3-V LVTTL at AA9 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[23] uses I/O standard 3.3-V LVTTL at Y8 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[24] uses I/O standard 3.3-V LVTTL at AA8 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[25] uses I/O standard 3.3-V LVTTL at Y7 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[26] uses I/O standard 3.3-V LVTTL at AA7 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[27] uses I/O standard 3.3-V LVTTL at Y6 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[28] uses I/O standard 3.3-V LVTTL at AA6 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[29] uses I/O standard 3.3-V LVTTL at Y5 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[30] uses I/O standard 3.3-V LVTTL at AA5 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[31] uses I/O standard 3.3-V LVTTL at Y4 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[32] uses I/O standard 3.3-V LVTTL at AB3 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[33] uses I/O standard 3.3-V LVTTL at Y3 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[34] uses I/O standard 3.3-V LVTTL at AB2 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin GPIO[35] uses I/O standard 3.3-V LVTTL at AA2 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin MAX10_CLK1_50 uses I/O standard 3.3-V LVTTL at P11 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 37
+    Info (169178): Pin KEY[0] uses I/O standard 3.3 V Schmitt Trigger at B8 File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 81
 Warning (169064): Following 71 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
-    Info (169065): Pin DRAM_DQ[0] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169065): Pin DRAM_DQ[1] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169065): Pin DRAM_DQ[2] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169065): Pin DRAM_DQ[3] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169065): Pin DRAM_DQ[4] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169065): Pin DRAM_DQ[5] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169065): Pin DRAM_DQ[6] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169065): Pin DRAM_DQ[7] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169065): Pin DRAM_DQ[8] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169065): Pin DRAM_DQ[9] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169065): Pin DRAM_DQ[10] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169065): Pin DRAM_DQ[11] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169065): Pin DRAM_DQ[12] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169065): Pin DRAM_DQ[13] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169065): Pin DRAM_DQ[14] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169065): Pin DRAM_DQ[15] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
-    Info (169065): Pin GSENSOR_SDI has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 108
-    Info (169065): Pin GSENSOR_SDO has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 109
-    Info (169065): Pin ARDUINO_IO[0] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169065): Pin ARDUINO_IO[1] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169065): Pin ARDUINO_IO[2] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169065): Pin ARDUINO_IO[3] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169065): Pin ARDUINO_IO[4] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169065): Pin ARDUINO_IO[5] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169065): Pin ARDUINO_IO[6] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169065): Pin ARDUINO_IO[7] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169065): Pin ARDUINO_IO[8] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169065): Pin ARDUINO_IO[9] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169065): Pin ARDUINO_IO[10] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169065): Pin ARDUINO_IO[11] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169065): Pin ARDUINO_IO[12] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169065): Pin ARDUINO_IO[13] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169065): Pin ARDUINO_IO[14] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169065): Pin ARDUINO_IO[15] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
-    Info (169065): Pin ARDUINO_RESET_N has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 115
-    Info (169065): Pin GPIO[0] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[1] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[2] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[3] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[4] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[5] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[6] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[7] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[8] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[9] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[10] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[11] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[12] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[13] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[14] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[15] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[16] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[17] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[18] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[19] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[20] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[21] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[22] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[23] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[24] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[25] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[26] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[27] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[28] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[29] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[30] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[31] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[32] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[33] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[34] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-    Info (169065): Pin GPIO[35] has a permanently disabled output enable File: E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
-Info (144001): Generated suppressed messages file E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/output_files/driver_7seg.fit.smsg
+    Info (169065): Pin DRAM_DQ[0] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169065): Pin DRAM_DQ[1] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169065): Pin DRAM_DQ[2] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169065): Pin DRAM_DQ[3] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169065): Pin DRAM_DQ[4] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169065): Pin DRAM_DQ[5] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169065): Pin DRAM_DQ[6] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169065): Pin DRAM_DQ[7] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169065): Pin DRAM_DQ[8] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169065): Pin DRAM_DQ[9] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169065): Pin DRAM_DQ[10] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169065): Pin DRAM_DQ[11] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169065): Pin DRAM_DQ[12] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169065): Pin DRAM_DQ[13] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169065): Pin DRAM_DQ[14] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169065): Pin DRAM_DQ[15] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 52
+    Info (169065): Pin GSENSOR_SDI has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 108
+    Info (169065): Pin GSENSOR_SDO has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 109
+    Info (169065): Pin ARDUINO_IO[0] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169065): Pin ARDUINO_IO[1] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169065): Pin ARDUINO_IO[2] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169065): Pin ARDUINO_IO[3] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169065): Pin ARDUINO_IO[4] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169065): Pin ARDUINO_IO[5] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169065): Pin ARDUINO_IO[6] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169065): Pin ARDUINO_IO[7] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169065): Pin ARDUINO_IO[8] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169065): Pin ARDUINO_IO[9] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169065): Pin ARDUINO_IO[10] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169065): Pin ARDUINO_IO[11] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169065): Pin ARDUINO_IO[12] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169065): Pin ARDUINO_IO[13] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169065): Pin ARDUINO_IO[14] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169065): Pin ARDUINO_IO[15] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 114
+    Info (169065): Pin ARDUINO_RESET_N has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 115
+    Info (169065): Pin GPIO[0] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[1] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[2] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[3] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[4] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[5] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[6] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[7] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[8] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[9] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[10] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[11] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[12] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[13] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[14] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[15] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[16] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[17] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[18] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[19] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[20] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[21] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[22] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[23] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[24] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[25] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[26] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[27] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[28] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[29] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[30] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[31] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[32] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[33] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[34] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin GPIO[35] has a permanently disabled output enable File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/DE10_LITE_Golden_Top.v Line: 122
+Info (144001): Generated suppressed messages file E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/output_files/driver_7seg.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 8 warnings
     Info: Peak virtual memory: 6313 megabytes
-    Info: Processing ended: Mon Mar 23 21:07:05 2026
-    Info: Elapsed time: 00:00:16
+    Info: Processing ended: Thu May 21 17:27:17 2026
+    Info: Elapsed time: 00:00:17
     Info: Total CPU time (on all processors): 00:00:23
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in E:/Facultate/Anul 3/Semestrul 2/LDH/LDH_laborator/driver_7seg/quartus/output_files/driver_7seg.fit.smsg.
+The suppressed messages can be found in E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/driver_7seg/quartus/output_files/driver_7seg.fit.smsg.
 
 

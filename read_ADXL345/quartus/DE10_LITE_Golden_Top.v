@@ -190,6 +190,14 @@ fsm_read_axes_data fsm_read_axes_data_i(
 .data_valid_o(data_valid)
 );
 
+pll pll_i(
+.areset	(~rst_n)			 ,
+.inclk0	(MAX10_CLK1_50),
+.c0			(c0)					 ,
+.c1			(c1)					 ,
+.locked	()
+);
+
 //req_gen req_gen_i(
 //.clk  			(c0)						,
 //.rst_n			(rst_n)					,
@@ -199,14 +207,6 @@ fsm_read_axes_data fsm_read_axes_data_i(
 //.data				(data)					,
 //.LEDS				({LEDR[7], LEDR[6], LEDR[5], LEDR[4], LEDR[3], LEDR[2], LEDR[1], LEDR[0]})
 //);
-
-pll pll_i(
-.areset	(~rst_n)			 ,
-.inclk0	(MAX10_CLK1_50),
-.c0			(c0)					 ,
-.c1			(c1)					 ,
-.locked	()
-);
 
 endmodule
 

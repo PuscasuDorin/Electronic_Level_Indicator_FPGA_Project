@@ -28,7 +28,7 @@ localparam MAX_TICK_100HZ						= 32'h7_A120; //500_000
 
 reg [3:0]  current_state;
 reg [3:0]  next_state;
-reg [31:0] timer_cnt;
+reg [32:0] timer_cnt;
 wire tick;
 
 always @(posedge clk or negedge rst_n)begin
@@ -185,7 +185,7 @@ always @(posedge clk or negedge rst_n) begin
 	
 end
 
-endmodule
+end
 
 
 

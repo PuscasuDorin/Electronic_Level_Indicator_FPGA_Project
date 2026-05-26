@@ -1,5 +1,5 @@
 Analysis & Synthesis report for read_ADXL345
-Sat Apr 25 11:44:25 2026
+Tue May 26 14:23:31 2026
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -13,16 +13,19 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: pll:pll_i|altpll:altpll_component
- 12. altpll Parameter Settings by Entity Instance
- 13. Port Connectivity Checks: "pll:pll_i"
- 14. Port Connectivity Checks: "spi_phy:spi_phy_i"
- 15. Post-Synthesis Netlist Statistics for Top Partition
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
+  8. State Machine - |DE10_LITE_Golden_Top|fsm_read_axes_data:fsm_read_axes_data_i|current_state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: pll:pll_i|altpll:altpll_component
+ 14. altpll Parameter Settings by Entity Instance
+ 15. Port Connectivity Checks: "pll:pll_i"
+ 16. Port Connectivity Checks: "fsm_read_axes_data:fsm_read_axes_data_i"
+ 17. Port Connectivity Checks: "spi_phy:spi_phy_i"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -49,15 +52,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Apr 25 11:44:25 2026          ;
+; Analysis & Synthesis Status        ; Successful - Tue May 26 14:23:31 2026          ;
 ; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                      ; read_ADXL345                                   ;
 ; Top-level Entity Name              ; DE10_LITE_Golden_Top                           ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 46                                             ;
-;     Total combinational functions  ; 37                                             ;
-;     Dedicated logic registers      ; 43                                             ;
-; Total registers                    ; 43                                             ;
+; Total logic elements               ; 102                                            ;
+;     Total combinational functions  ; 97                                             ;
+;     Dedicated logic registers      ; 83                                             ;
+; Total registers                    ; 83                                             ;
 ; Total pins                         ; 185                                            ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
@@ -76,6 +79,8 @@ https://fpgasoftware.intel.com/eula.
 ; Device                                                           ; 10M50DAF484C6GES     ;                    ;
 ; Top-level entity name                                            ; DE10_LITE_Golden_Top ; read_ADXL345       ;
 ; Family name                                                      ; MAX 10               ; Cyclone V          ;
+; Verilog Show LMF Mapping Messages                                ; Off                  ;                    ;
+; Verilog Version                                                  ; SystemVerilog_2005   ; Verilog_2001       ;
 ; Use smart compilation                                            ; Off                  ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                   ; On                 ;
 ; Enable compact report table                                      ; Off                  ; Off                ;
@@ -83,7 +88,6 @@ https://fpgasoftware.intel.com/eula.
 ; Create Debugging Nodes for IP Cores                              ; Off                  ; Off                ;
 ; Preserve fewer node names                                        ; On                   ; On                 ;
 ; Intel FPGA IP Evaluation Mode                                    ; Enable               ; Enable             ;
-; Verilog Version                                                  ; Verilog_2001         ; Verilog_2001       ;
 ; VHDL Version                                                     ; VHDL_1993            ; VHDL_1993          ;
 ; State Machine Processing                                         ; Auto                 ; Auto               ;
 ; Safe State Machine                                               ; Off                  ; Off                ;
@@ -176,9 +180,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                           ; Library ;
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------+---------+
+; ../hdl/fsm_read_axes_data.v      ; yes             ; User Verilog HDL File        ; E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/hdl/fsm_read_axes_data.v       ;         ;
 ; pll.v                            ; yes             ; User Wizard-Generated File   ; E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/pll.v                  ;         ;
 ; ../hdl/spi_phy.sv                ; yes             ; User SystemVerilog HDL File  ; E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/hdl/spi_phy.sv                 ;         ;
-; ../hdl/req_gen.v                 ; yes             ; User Verilog HDL File        ; E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/hdl/req_gen.v                  ;         ;
 ; DE10_LITE_Golden_Top.v           ; yes             ; User Verilog HDL File        ; E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v ;         ;
 ; altpll.tdf                       ; yes             ; Megafunction                 ; e:/quartus/libraries/megafunctions/altpll.tdf                                                          ;         ;
 ; aglobal221.inc                   ; yes             ; Megafunction                 ; e:/quartus/libraries/megafunctions/aglobal221.inc                                                      ;         ;
@@ -194,20 +198,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                        ;
 +---------------------------------------------+------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 46                                                                           ;
+; Estimated Total logic elements              ; 102                                                                          ;
 ;                                             ;                                                                              ;
-; Total combinational functions               ; 37                                                                           ;
+; Total combinational functions               ; 97                                                                           ;
 ; Logic element usage by number of LUT inputs ;                                                                              ;
-;     -- 4 input functions                    ; 16                                                                           ;
-;     -- 3 input functions                    ; 8                                                                            ;
-;     -- <=2 input functions                  ; 13                                                                           ;
+;     -- 4 input functions                    ; 36                                                                           ;
+;     -- 3 input functions                    ; 16                                                                           ;
+;     -- <=2 input functions                  ; 45                                                                           ;
 ;                                             ;                                                                              ;
 ; Logic elements by mode                      ;                                                                              ;
-;     -- normal mode                          ; 37                                                                           ;
-;     -- arithmetic mode                      ; 0                                                                            ;
+;     -- normal mode                          ; 66                                                                           ;
+;     -- arithmetic mode                      ; 31                                                                           ;
 ;                                             ;                                                                              ;
-; Total registers                             ; 43                                                                           ;
-;     -- Dedicated logic registers            ; 43                                                                           ;
+; Total registers                             ; 83                                                                           ;
+;     -- Dedicated logic registers            ; 83                                                                           ;
 ;     -- I/O registers                        ; 0                                                                            ;
 ;                                             ;                                                                              ;
 ; I/O pins                                    ; 185                                                                          ;
@@ -218,35 +222,55 @@ https://fpgasoftware.intel.com/eula.
 ;     -- PLLs                                 ; 1                                                                            ;
 ;                                             ;                                                                              ;
 ; Maximum fan-out node                        ; pll:pll_i|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 45                                                                           ;
-; Total fan-out                               ; 539                                                                          ;
-; Average fan-out                             ; 1.03                                                                         ;
+; Maximum fan-out                             ; 85                                                                           ;
+; Total fan-out                               ; 845                                                                          ;
+; Average fan-out                             ; 1.36                                                                         ;
 +---------------------------------------------+------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                 ;
-+--------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+----------------------+--------------+
-; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                               ; Entity Name          ; Library Name ;
-+--------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+----------------------+--------------+
-; |DE10_LITE_Golden_Top                ; 37 (0)              ; 43 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 185  ; 0            ; 0          ; |DE10_LITE_Golden_Top                                                             ; DE10_LITE_Golden_Top ; work         ;
-;    |pll:pll_i|                       ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|pll:pll_i                                                   ; pll                  ; work         ;
-;       |altpll:altpll_component|      ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|pll:pll_i|altpll:altpll_component                           ; altpll               ; work         ;
-;          |pll_altpll:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|pll:pll_i|altpll:altpll_component|pll_altpll:auto_generated ; pll_altpll           ; work         ;
-;    |req_gen:req_gen_i|               ; 2 (2)               ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|req_gen:req_gen_i                                           ; req_gen              ; work         ;
-;    |spi_phy:spi_phy_i|               ; 35 (35)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|spi_phy:spi_phy_i                                           ; spi_phy              ; work         ;
-+--------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+----------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                         ;
++----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                               ; Entity Name          ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+----------------------+--------------+
+; |DE10_LITE_Golden_Top                        ; 97 (0)              ; 83 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 185  ; 0            ; 0          ; |DE10_LITE_Golden_Top                                                             ; DE10_LITE_Golden_Top ; work         ;
+;    |fsm_read_axes_data:fsm_read_axes_data_i| ; 60 (60)             ; 49 (49)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|fsm_read_axes_data:fsm_read_axes_data_i                     ; fsm_read_axes_data   ; work         ;
+;    |pll:pll_i|                               ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|pll:pll_i                                                   ; pll                  ; work         ;
+;       |altpll:altpll_component|              ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|pll:pll_i|altpll:altpll_component                           ; altpll               ; work         ;
+;          |pll_altpll:auto_generated|         ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|pll:pll_i|altpll:altpll_component|pll_altpll:auto_generated ; pll_altpll           ; work         ;
+;    |spi_phy:spi_phy_i|                       ; 37 (37)             ; 34 (34)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|spi_phy:spi_phy_i                                           ; spi_phy              ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; spi_phy:spi_phy_i|wr_op               ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 1 ;                                        ;
-+---------------------------------------+----------------------------------------+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |DE10_LITE_Golden_Top|fsm_read_axes_data:fsm_read_axes_data_i|current_state                                                                                                                                                                                                                                                            ;
++---------------------------------------+---------------------------------+--------------------------------+---------------------------------+--------------------------------+--------------------------------+----------------------------------+---------------------------------------+---------------------------+----------------------------------+
+; Name                                  ; current_state.STATE_READ_Y_HIGH ; current_state.STATE_READ_Y_LOW ; current_state.STATE_READ_X_HIGH ; current_state.STATE_READ_X_LOW ; current_state.STATE_WAIT_100HZ ; current_state.STATE_CONFIG_POWER ; current_state.STATE_CONFIG_RESOLUTION ; current_state.STATE_RESET ; current_state.STATE_OUTPUT_VALID ;
++---------------------------------------+---------------------------------+--------------------------------+---------------------------------+--------------------------------+--------------------------------+----------------------------------+---------------------------------------+---------------------------+----------------------------------+
+; current_state.STATE_RESET             ; 0                               ; 0                              ; 0                               ; 0                              ; 0                              ; 0                                ; 0                                     ; 0                         ; 0                                ;
+; current_state.STATE_CONFIG_RESOLUTION ; 0                               ; 0                              ; 0                               ; 0                              ; 0                              ; 0                                ; 1                                     ; 1                         ; 0                                ;
+; current_state.STATE_CONFIG_POWER      ; 0                               ; 0                              ; 0                               ; 0                              ; 0                              ; 1                                ; 0                                     ; 1                         ; 0                                ;
+; current_state.STATE_WAIT_100HZ        ; 0                               ; 0                              ; 0                               ; 0                              ; 1                              ; 0                                ; 0                                     ; 1                         ; 0                                ;
+; current_state.STATE_READ_X_LOW        ; 0                               ; 0                              ; 0                               ; 1                              ; 0                              ; 0                                ; 0                                     ; 1                         ; 0                                ;
+; current_state.STATE_READ_X_HIGH       ; 0                               ; 0                              ; 1                               ; 0                              ; 0                              ; 0                                ; 0                                     ; 1                         ; 0                                ;
+; current_state.STATE_READ_Y_LOW        ; 0                               ; 1                              ; 0                               ; 0                              ; 0                              ; 0                                ; 0                                     ; 1                         ; 0                                ;
+; current_state.STATE_READ_Y_HIGH       ; 1                               ; 0                              ; 0                               ; 0                              ; 0                              ; 0                                ; 0                                     ; 1                         ; 0                                ;
+; current_state.STATE_OUTPUT_VALID      ; 0                               ; 0                              ; 0                               ; 0                              ; 0                              ; 0                                ; 0                                     ; 1                         ; 1                                ;
++---------------------------------------+---------------------------------+--------------------------------+---------------------------------+--------------------------------+--------------------------------+----------------------------------+---------------------------------------+---------------------------+----------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                           ;
++---------------------------------------------------------+--------------------+
+; Register name                                           ; Reason for Removal ;
++---------------------------------------------------------+--------------------+
+; fsm_read_axes_data:fsm_read_axes_data_i|current_state~4 ; Lost fanout        ;
+; fsm_read_axes_data:fsm_read_axes_data_i|current_state~5 ; Lost fanout        ;
+; fsm_read_axes_data:fsm_read_axes_data_i|current_state~6 ; Lost fanout        ;
+; Total Number of Removed Registers = 3                   ;                    ;
++---------------------------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -254,24 +278,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 43    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 83    ;
+; Number of registers using Synchronous Clear  ; 32    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 43    ;
+; Number of registers using Asynchronous Clear ; 83    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 24    ;
+; Number of registers using Clock Enable       ; 20    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |DE10_LITE_Golden_Top|spi_phy:spi_phy_i|shift_reg[0]  ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|spi_phy:spi_phy_i|shift_reg[13] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
++---------------------------------------------------------+
+; Inverted Register Statistics                            ;
++-----------------------------------------------+---------+
+; Inverted Register                             ; Fan out ;
++-----------------------------------------------+---------+
+; fsm_read_axes_data:fsm_read_axes_data_i|rw_ni ; 3       ;
+; Total number of inverted registers = 1        ;         ;
++-----------------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|spi_phy:spi_phy_i|shift_reg[14]                      ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|spi_phy:spi_phy_i|shift_reg[13]                      ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |DE10_LITE_Golden_Top|fsm_read_axes_data:fsm_read_axes_data_i|timer_cnt[8] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------+
@@ -674,16 +709,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "spi_phy:spi_phy_i"                                                                                                                                                                           ;
-+-----------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port            ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-----------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; rw_ni           ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; rw_ni[-1]       ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; wr_data_i       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (8 bits) it drives.  The 24 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; wr_data_i[7..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-+-----------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fsm_read_axes_data:fsm_read_axes_data_i"                                                                                          ;
++--------------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                                                                   ;
++--------------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+; addr_o       ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (6 bits) it drives; bit(s) "addr_o[7..6]" have no fanouts ;
+; wr_data_o    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                       ;
+; x_data_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                       ;
+; y_data_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                       ;
+; data_valid_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                       ;
++--------------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "spi_phy:spi_phy_i"                                                                                                                                    ;
++-----------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                           ;
++-----------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+; wr_data_i ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "wr_data_i[7..1]" will be connected to GND. ;
++-----------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -692,21 +737,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 185                         ;
-; cycloneiii_ff         ; 43                          ;
-;     CLR               ; 19                          ;
-;     ENA CLR           ; 24                          ;
+; cycloneiii_ff         ; 83                          ;
+;     CLR               ; 31                          ;
+;     CLR SCLR          ; 32                          ;
+;     ENA CLR           ; 20                          ;
 ; cycloneiii_io_obuf    ; 71                          ;
-; cycloneiii_lcell_comb ; 39                          ;
-;     normal            ; 39                          ;
+; cycloneiii_lcell_comb ; 99                          ;
+;     arith             ; 31                          ;
+;         2 data inputs ; 31                          ;
+;     normal            ; 68                          ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
+;         1 data inputs ; 2                           ;
 ;         2 data inputs ; 13                          ;
-;         3 data inputs ; 8                           ;
-;         4 data inputs ; 16                          ;
+;         3 data inputs ; 16                          ;
+;         4 data inputs ; 36                          ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.49                        ;
+; Max LUT depth         ; 4.10                        ;
+; Average LUT depth     ; 1.79                        ;
 +-----------------------+-----------------------------+
 
 
@@ -725,19 +773,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Sat Apr 25 11:44:10 2026
+    Info: Processing started: Tue May 26 14:23:18 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off read_ADXL345 -c read_ADXL345
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /github_projects/electronic_level_indicator_fpga_project/read_adxl345/hdl/fsm_read_axes_data.v
+    Info (12023): Found entity 1: fsm_read_axes_data File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/hdl/fsm_read_axes_data.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pll.v
     Info (12023): Found entity 1: pll File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/pll.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file /github_projects/electronic_level_indicator_fpga_project/read_adxl345/hdl/spi_phy.sv
     Info (12023): Found entity 1: spi_phy File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/hdl/spi_phy.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /github_projects/electronic_level_indicator_fpga_project/read_adxl345/hdl/req_gen.v
-    Info (12023): Found entity 1: req_gen File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/hdl/req_gen.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file de10_lite_golden_top.v
     Info (12023): Found entity 1: DE10_LITE_Golden_Top File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 29
+Warning (10236): Verilog HDL Implicit Net warning at DE10_LITE_Golden_Top.v(148): created implicit net for "req_button" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 148
+Warning (10236): Verilog HDL Implicit Net warning at DE10_LITE_Golden_Top.v(149): created implicit net for "addr_i" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 149
+Warning (10236): Verilog HDL Implicit Net warning at DE10_LITE_Golden_Top.v(165): created implicit net for "wr_data_o" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 165
 Info (12127): Elaborating entity "DE10_LITE_Golden_Top" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at DE10_LITE_Golden_Top.v(148): object "req_button" assigned a value but never read File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 148
+Warning (10036): Verilog HDL or VHDL warning at DE10_LITE_Golden_Top.v(149): object "addr_i" assigned a value but never read File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 149
+Warning (10230): Verilog HDL assignment warning at DE10_LITE_Golden_Top.v(149): truncated value with size 6 to match size of target (1) File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 149
 Warning (10034): Output port "DRAM_ADDR" at DE10_LITE_Golden_Top.v(46) has no driver File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 46
 Warning (10034): Output port "DRAM_BA" at DE10_LITE_Golden_Top.v(47) has no driver File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 47
 Warning (10034): Output port "HEX0" at DE10_LITE_Golden_Top.v(61) has no driver File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 61
@@ -746,7 +800,7 @@ Warning (10034): Output port "HEX2" at DE10_LITE_Golden_Top.v(67) has no driver 
 Warning (10034): Output port "HEX3" at DE10_LITE_Golden_Top.v(70) has no driver File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 70
 Warning (10034): Output port "HEX4" at DE10_LITE_Golden_Top.v(73) has no driver File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 73
 Warning (10034): Output port "HEX5" at DE10_LITE_Golden_Top.v(76) has no driver File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 76
-Warning (10034): Output port "LEDR[9..8]" at DE10_LITE_Golden_Top.v(86) has no driver File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 86
+Warning (10034): Output port "LEDR" at DE10_LITE_Golden_Top.v(86) has no driver File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 86
 Warning (10034): Output port "VGA_B" at DE10_LITE_Golden_Top.v(96) has no driver File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 96
 Warning (10034): Output port "VGA_G" at DE10_LITE_Golden_Top.v(97) has no driver File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 97
 Warning (10034): Output port "VGA_R" at DE10_LITE_Golden_Top.v(99) has no driver File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 99
@@ -760,9 +814,10 @@ Warning (10034): Output port "DRAM_UDQM" at DE10_LITE_Golden_Top.v(55) has no dr
 Warning (10034): Output port "DRAM_WE_N" at DE10_LITE_Golden_Top.v(56) has no driver File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 56
 Warning (10034): Output port "VGA_HS" at DE10_LITE_Golden_Top.v(98) has no driver File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 98
 Warning (10034): Output port "VGA_VS" at DE10_LITE_Golden_Top.v(100) has no driver File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 100
-Info (12128): Elaborating entity "spi_phy" for hierarchy "spi_phy:spi_phy_i" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 166
-Info (12128): Elaborating entity "req_gen" for hierarchy "req_gen:req_gen_i" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 176
-Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_i" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 184
+Info (12128): Elaborating entity "spi_phy" for hierarchy "spi_phy:spi_phy_i" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 174
+Info (12128): Elaborating entity "fsm_read_axes_data" for hierarchy "fsm_read_axes_data:fsm_read_axes_data_i" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 191
+Info (10264): Verilog HDL Case Statement information at fsm_read_axes_data.v(98): all case item expressions in this case statement are onehot File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/hdl/fsm_read_axes_data.v Line: 98
+Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_i" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 209
 Info (12128): Elaborating entity "altpll" for hierarchy "pll:pll_i|altpll:altpll_component" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/pll.v Line: 108
 Info (12130): Elaborated megafunction instantiation "pll:pll_i|altpll:altpll_component" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/pll.v Line: 108
 Info (12133): Instantiated megafunction "pll:pll_i|altpll:altpll_component" with the following parameter: File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/pll.v Line: 108
@@ -828,7 +883,7 @@ Info (12133): Instantiated megafunction "pll:pll_i|altpll:altpll_component" with
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
     Info (12023): Found entity 1: pll_altpll File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/db/pll_altpll.v Line: 31
 Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:pll_i|altpll:altpll_component|pll_altpll:auto_generated" File: e:/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
     Warning (13035): Inserted always-enabled tri-state buffer between "GSENSOR_SDO" and its non-tri-state driver. File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 109
 Warning (13039): The following bidirectional pins have no drivers
@@ -903,6 +958,8 @@ Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "GPIO[35]" has no driver File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 122
 Info (13060): One or more bidirectional pins are fed by always enabled tri-state buffers
     Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "GSENSOR_SDO" is moved to its source File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 109
+Info (13000): Registers with preset signals will power-up high File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/hdl/fsm_read_axes_data.v Line: 9
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13009): TRI or OPNDRN buffers permanently enabled
     Warning (13010): Node "GSENSOR_SDO~synth" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 109
 Warning (13024): Output pins are stuck at VCC or GND
@@ -977,6 +1034,14 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX5[5]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 76
     Warning (13410): Pin "HEX5[6]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 76
     Warning (13410): Pin "HEX5[7]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 76
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 86
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 86
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 86
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 86
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 86
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 86
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 86
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 86
     Warning (13410): Pin "LEDR[8]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 86
     Warning (13410): Pin "LEDR[9]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 86
     Warning (13410): Pin "VGA_B[0]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 96
@@ -994,27 +1059,35 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_R[3]" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 99
     Warning (13410): Pin "VGA_VS" is stuck at GND File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 100
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 8 input pin(s) that do not drive logic
+Warning (21074): Design contains 15 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "ADC_CLK_10" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 33
     Warning (15610): No output dependent on input pin "MAX10_CLK2_50" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 41
+    Warning (15610): No output dependent on input pin "KEY[1]" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 81
+    Warning (15610): No output dependent on input pin "SW[0]" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 91
+    Warning (15610): No output dependent on input pin "SW[1]" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 91
+    Warning (15610): No output dependent on input pin "SW[2]" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 91
+    Warning (15610): No output dependent on input pin "SW[3]" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 91
+    Warning (15610): No output dependent on input pin "SW[4]" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 91
+    Warning (15610): No output dependent on input pin "SW[5]" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 91
     Warning (15610): No output dependent on input pin "SW[6]" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 91
     Warning (15610): No output dependent on input pin "SW[7]" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 91
     Warning (15610): No output dependent on input pin "SW[8]" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 91
     Warning (15610): No output dependent on input pin "SW[9]" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 91
     Warning (15610): No output dependent on input pin "GSENSOR_INT[1]" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 106
     Warning (15610): No output dependent on input pin "GSENSOR_INT[2]" File: E:/GitHub_Projects/Electronic_Level_Indicator_FPGA_Project/read_ADXL345/quartus/DE10_LITE_Golden_Top.v Line: 106
-Info (21057): Implemented 232 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 288 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 17 input pins
     Info (21059): Implemented 97 output pins
     Info (21060): Implemented 71 bidirectional pins
-    Info (21061): Implemented 46 logic cells
+    Info (21061): Implemented 102 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 195 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 216 warnings
     Info: Peak virtual memory: 4875 megabytes
-    Info: Processing ended: Sat Apr 25 11:44:25 2026
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:30
+    Info: Processing ended: Tue May 26 14:23:31 2026
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:29
 
 

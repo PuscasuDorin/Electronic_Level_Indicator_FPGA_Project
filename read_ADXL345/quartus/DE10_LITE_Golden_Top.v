@@ -129,12 +129,20 @@ wire rst_n;
 wire c0		;
 wire c1		;
 
-wire req_o			 ;
-wire req_button	 ;
-wire ack_o			 ;
-wire [7:0] data	 ;
-wire spi_oe_o		 ;
-wire [5:0] addr_i;
+//wire req_button;
+wire spi_oe_o;
+
+
+wire 			 req		;
+wire 			 ack		;
+wire 			 rw_ni	;
+wire [5:0] addr		;
+wire [7:0] rd_data;
+wire [7:0] wr_data;
+
+wire [15:0] x_data		;
+wire [15:0] y_data		;
+wire 				data_valid;
 
 assign rst_n = KEY[0];
 assign req_button = KEY[1];
@@ -151,12 +159,12 @@ spi_phy spi_phy_i(
 .clk_i     	(c0)	 ,  // max 5MHz for ADXL345 sensor
 .spi_clk_i 	(c1)	 ,  // same frequency as clk_i, 220 deg phase offset
 	
-.req_i     	(req_o) ,
-.rw_ni     	(1)	 	  ,  // 1=read, 0=write
-.addr_i    	(addr_i),
-.wr_data_i 	(0) 		,
-.ack_o     	(ack_o) ,
-.rd_data_o 	(data)	,
+.req_i     	(req) 		 ,
+.rw_ni     	(rw_ni)		 ,  // 1=read, 0=write
+.addr_i    	(addr)		 ,
+.wr_data_i 	(wr_data_o),
+.ack_o     	(ack) 		 ,
+.rd_data_o 	(rd_data)	 ,
 	
 .spi_cs_no 	(GSENSOR_CS_N),
 .spi_clk_o 	(GSENSOR_SCLK),
@@ -165,15 +173,32 @@ spi_phy spi_phy_i(
 .spi_oe_o  	(spi_oe_o)   // control 3-state buffer for 3-wire SPI mode 
 );
 
-req_gen req_gen_i(
-.clk  			(c0)						,
-.rst_n			(rst_n)					,
-.ack_i			(ack_o)					,
-.req_button (req_button)		,
-.req_o			(req_o)					,
-.data				(data)					,
-.LEDS				({LEDR[7], LEDR[6], LEDR[5], LEDR[4], LEDR[3], LEDR[2], LEDR[1], LEDR[0]})
+fsm_read_axes_data fsm_read_axes_data_i(
+.rst_n			 (rst_n),
+.clk	 			 (c0)		,
+
+.ack_i			 (ack)		,
+.rd_data_i	 (rd_data),
+
+.req_o			 (req)		,
+.rw_ni			 (rw_ni)	,	 // 1=read, 0=write
+.addr_o			 (addr)		,
+.wr_data_o	 (wr_data),
+
+.x_data_o		 (x_data),  
+.y_data_o		 (y_data),     
+.data_valid_o(data_valid)
 );
+
+//req_gen req_gen_i(
+//.clk  			(c0)						,
+//.rst_n			(rst_n)					,
+//.ack_i			(ack_o)					,
+//.req_button (req_button)		,
+//.req_o			(req_o)					,
+//.data				(data)					,
+//.LEDS				({LEDR[7], LEDR[6], LEDR[5], LEDR[4], LEDR[3], LEDR[2], LEDR[1], LEDR[0]})
+//);
 
 pll pll_i(
 .areset	(~rst_n)			 ,

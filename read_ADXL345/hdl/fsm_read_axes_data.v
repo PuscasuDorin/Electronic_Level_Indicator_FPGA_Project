@@ -7,12 +7,11 @@ input [7:0] rd_data_i 		,
 
 output reg req_o					,
 output reg rw_ni					,	 // 1=read, 0=write
-output reg [7:0] addr_o		,
+output reg [5:0] addr_o		,
 output reg [7:0] wr_data_o,
 
-output reg [15:0] x_data_o,  
-output reg [15:0] y_data_o,     
-output reg        data_valid_o
+output reg signed [15:0] x_data_o,  
+output reg signed [15:0] y_data_o
 );
 
 localparam STATE_RESET		 					= 4'd0;
@@ -23,7 +22,6 @@ localparam STATE_READ_X_LOW					= 4'd4;
 localparam STATE_READ_X_HIGH				= 4'd5;
 localparam STATE_READ_Y_LOW					= 4'd6;
 localparam STATE_READ_Y_HIGH				= 4'd7;
-localparam STATE_OUTPUT_VALID				= 4'd8;
 localparam MAX_TICK_100HZ						= 32'h7_A120; //500_000
 
 reg [3:0]  current_state;
@@ -74,12 +72,8 @@ always_comb begin
 		end
 		
 		STATE_READ_Y_HIGH: begin
-			if(ack_i) next_state = STATE_OUTPUT_VALID; else
+			if(ack_i) next_state = STATE_WAIT_100HZ; else
 								next_state = STATE_READ_Y_HIGH;
-		end
-		
-		STATE_OUTPUT_VALID: begin
-			next_state = STATE_WAIT_100HZ;
 		end
 		
 	endcase	
@@ -90,23 +84,20 @@ always @(posedge clk or negedge rst_n)begin
 	if (~rst_n)begin
 		req_o 		<= 1'b0;
 		rw_ni 		<= 1'b1;
-		addr_o 		<= 8'h00;
+		addr_o 		<= 6'h00;
 		wr_data_o <= 8'h00;
 	end else begin
-		data_valid_o <= 1'b0;
 		
 		case (current_state)
 			STATE_RESET: begin
-				data_valid_o <= 1'b0;
 				req_o 			 <= 1'b0;
 				rw_ni 			 <= 1'b0;
 			end
 			
 			STATE_CONFIG_RESOLUTION: begin
-				data_valid_o <= 1'b0;
 				req_o 			 <= 1'b1;
 				rw_ni 			 <= 1'b0;
-				addr_o 			 <= 8'h31;
+				addr_o 			 <= 6'h31;
 				wr_data_o 	 <= 8'b0100_1000;
 				
 				if(ack_i) req_o <= 1'b0;
@@ -115,7 +106,7 @@ always @(posedge clk or negedge rst_n)begin
 			STATE_CONFIG_POWER: begin
 				req_o 		<= 1'b1;
 				rw_ni 		<= 1'b0;
-				addr_o 		<= 8'h2D;
+				addr_o 		<= 6'h2D;
 				wr_data_o <= 8'b0000_1000;
 				
 				if(ack_i) req_o <= 1'b0;
@@ -123,7 +114,7 @@ always @(posedge clk or negedge rst_n)begin
 			
 			STATE_READ_X_LOW: begin
 				rw_ni <= 1'b1;
-				addr_o <= 8'h32;
+				addr_o <= 6'h32;
 				if(ack_i)begin
 					x_data_o[7:0] <= rd_data_i;
 					req_o <= 1'b0;
@@ -133,7 +124,7 @@ always @(posedge clk or negedge rst_n)begin
 			
 			STATE_READ_X_HIGH: begin
 				rw_ni <= 1'b1;
-				addr_o <= 8'h33;
+				addr_o <= 6'h33;
 				if(ack_i)begin
 					x_data_o[15:8] <= rd_data_i;
 					req_o <= 1'b0;
@@ -143,7 +134,7 @@ always @(posedge clk or negedge rst_n)begin
 			
 			STATE_READ_Y_LOW: begin
 				rw_ni <= 1'b1;
-				addr_o <= 8'h34;
+				addr_o <= 6'h34;
 				if(ack_i)begin
 					y_data_o[7:0] <= rd_data_i;
 					req_o <= 1'b0;
@@ -153,17 +144,12 @@ always @(posedge clk or negedge rst_n)begin
 			
 			STATE_READ_Y_HIGH: begin
 				rw_ni <= 1'b1;
-				addr_o <= 8'h35;
+				addr_o <= 6'h35;
 				if(ack_i)begin 
 					y_data_o[15:8] <= rd_data_i;
 					req_o <= 1'b0;
 				end else
 				req_o <= 1'b1;
-			end
-			
-			STATE_OUTPUT_VALID: begin
-				req_o <= 1'b0;
-				data_valid_o <= 1'b1;
 			end
 			
 		endcase

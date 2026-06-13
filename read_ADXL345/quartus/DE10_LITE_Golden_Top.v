@@ -140,15 +140,24 @@ wire [5:0] addr		;
 wire [7:0] rd_data;
 wire [7:0] wr_data;
 
-wire [15:0] x_data		;
-wire [15:0] y_data		;
-wire 				data_valid;
+wire signed [15:0] x_data		;
+wire signed [15:0] y_data		;
+
+reg [2:0] x_pos;
+reg 		  y_pos;
+
+parameter BITS_PER_DISPLAY = 8;
+parameter DISPLAYS = 6;
+//parameter X_RANGE = 510; 
+//parameter Y_RANGE = 510;
 
 assign rst_n = KEY[0];
-assign req_button = KEY[1];
 assign addr_i = SW[5:0];
 
 assign GSENSOR_SDI = (spi_oe_o) ? GSENSOR_SDO : 1'bZ;
+
+
+assign LEDR[9:0] = (~SW[0]) ? x_data[9:0] : y_data[9:0];	
 
 //=======================================================
 //  Structural coding
@@ -162,7 +171,7 @@ spi_phy spi_phy_i(
 .req_i     	(req) 		 ,
 .rw_ni     	(rw_ni)		 ,  // 1=read, 0=write
 .addr_i    	(addr)		 ,
-.wr_data_i 	(wr_data_o),
+.wr_data_i 	(wr_data),
 .ack_o     	(ack) 		 ,
 .rd_data_o 	(rd_data)	 ,
 	
@@ -186,9 +195,34 @@ fsm_read_axes_data fsm_read_axes_data_i(
 .wr_data_o	 (wr_data),
 
 .x_data_o		 (x_data),  
-.y_data_o		 (y_data),     
-.data_valid_o(data_valid)
+.y_data_o		 (y_data)
 );
+
+xy_raw_to_positions #(
+//.X_RANGE (X_RANGE ),
+//.Y_RANGE (Y_RANGE ), 
+.DISPLAYS(DISPLAYS)
+) xy_raw_to_positions_i(
+.clk 			(c0)   ,
+.rst_n		(rst_n),
+	
+.x_data_i	(x_data),
+.y_data_i (y_data),
+
+.x_pos_o  (x_pos),
+.y_pos_o  (y_pos)
+);
+
+driver_7seg #(
+.BITS_PER_DISPLAY (BITS_PER_DISPLAY),
+.DISPLAYS 			  (DISPLAYS)
+) i_driver_7seg (  
+.clk        (c0)   ,
+.rst_n      (rst_n),
+.sel_row    (y_pos),
+.sel_column (x_pos),
+.segments_o ({HEX5, HEX4, HEX3, HEX2, HEX1, HEX0})
+); 
 
 pll pll_i(
 .areset	(~rst_n)			 ,

@@ -1,12 +1,11 @@
 
 State Machine - |DE10_LITE_Golden_Top|fsm_read_axes_data:fsm_read_axes_data_i|current_state
-Name current_state.STATE_READ_Y_HIGH current_state.STATE_READ_Y_LOW current_state.STATE_READ_X_HIGH current_state.STATE_READ_X_LOW current_state.STATE_WAIT_100HZ current_state.STATE_CONFIG_POWER current_state.STATE_CONFIG_RESOLUTION current_state.STATE_RESET current_state.STATE_OUTPUT_VALID 
-current_state.STATE_RESET 0 0 0 0 0 0 0 0 0 
-current_state.STATE_CONFIG_RESOLUTION 0 0 0 0 0 0 1 1 0 
-current_state.STATE_CONFIG_POWER 0 0 0 0 0 1 0 1 0 
-current_state.STATE_WAIT_100HZ 0 0 0 0 1 0 0 1 0 
-current_state.STATE_READ_X_LOW 0 0 0 1 0 0 0 1 0 
-current_state.STATE_READ_X_HIGH 0 0 1 0 0 0 0 1 0 
-current_state.STATE_READ_Y_LOW 0 1 0 0 0 0 0 1 0 
-current_state.STATE_READ_Y_HIGH 1 0 0 0 0 0 0 1 0 
-current_state.STATE_OUTPUT_VALID 0 0 0 0 0 0 0 1 1 
+Name current_state.STATE_READ_Y_HIGH current_state.STATE_READ_Y_LOW current_state.STATE_READ_X_HIGH current_state.STATE_READ_X_LOW current_state.STATE_WAIT_100HZ current_state.STATE_CONFIG_POWER current_state.STATE_CONFIG_RESOLUTION current_state.STATE_RESET 
+current_state.STATE_RESET 0 0 0 0 0 0 0 0 
+current_state.STATE_CONFIG_RESOLUTION 0 0 0 0 0 0 1 1 
+current_state.STATE_CONFIG_POWER 0 0 0 0 0 1 0 1 
+current_state.STATE_WAIT_100HZ 0 0 0 0 1 0 0 1 
+current_state.STATE_READ_X_LOW 0 0 0 1 0 0 0 1 
+current_state.STATE_READ_X_HIGH 0 0 1 0 0 0 0 1 
+current_state.STATE_READ_Y_LOW 0 1 0 0 0 0 0 1 
+current_state.STATE_READ_Y_HIGH 1 0 0 0 0 0 0 1 

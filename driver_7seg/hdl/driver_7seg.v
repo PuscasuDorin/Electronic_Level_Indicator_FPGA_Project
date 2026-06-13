@@ -1,19 +1,19 @@
-module driver_7seg #(parameter COLUMNS = 6
+module driver_7seg #(parameter DISPLAYS = 6
 										,parameter BITS_PER_DISPLAY = 8
 										)
 (
 	input 																				 clk  		 ,
 	input 																				 rst_n		 ,	
   input 																				 sel_row	 ,
-  input [$clog2(COLUMNS+1)-1:0] 								 sel_column,
-	output reg [COLUMNS-1:0][BITS_PER_DISPLAY-1:0] segments_o				
+  input [$clog2(DISPLAYS+1)-1:0] 								 sel_column,
+	output reg [DISPLAYS-1:0][BITS_PER_DISPLAY-1:0] segments_o				
 );
 //8 *(sel_column+1)-1:8*sel_column 	
 localparam UP_PATTERN = 8'b10011100	 							 ;
 localparam DOWN_PATTERN = 8'b10100011							 ;
-localparam NO_SEGMENTS = COLUMNS * BITS_PER_DISPLAY;
+localparam NO_SEGMENTS = DISPLAYS * BITS_PER_DISPLAY;
 
-reg [COLUMNS-1:0][BITS_PER_DISPLAY-1:0] segments;
+reg [DISPLAYS-1:0][BITS_PER_DISPLAY-1:0] segments;
 
 always_comb
 begin

@@ -128,7 +128,7 @@ module DE10_LITE_Golden_Top(
 //=======================================================
 parameter BITS_PER_DISPLAY = 8;
 parameter COLUMNS = 6					;
-parameter TIMER_LIMIT = 25_000_000;
+parameter STEP_DELAY_S = 1;
 
 wire sel_row	 ;
 wire [$clog2(COLUMNS+1)-1:0] sel_column;
@@ -150,7 +150,7 @@ driver_7seg #(
 ); 
 
 ck_div #(
-.TIMER_LIMIT (TIMER_LIMIT)
+.STEP_DELAY_S (STEP_DELAY_S)
 ) i_ck_div (  
 .clk   (MAX10_CLK1_50),
 .rst_n (KEY[0])		    ,

@@ -1,9 +1,12 @@
-module ck_div	#(parameter TIMER_LIMIT = 100_000_000)
+module ck_div	#(parameter STEP_DELAY_S = 1)
 (
 	input  clk				,
 	input  rst_n			,
 	output move
 );
+localparam F_CLK_HZ = 50_000_000;
+localparam TIMER_LIMIT = F_CLK_HZ * STEP_DELAY_S;
+
 reg [31:0] counter;
 
 always @(posedge clk or negedge rst_n)

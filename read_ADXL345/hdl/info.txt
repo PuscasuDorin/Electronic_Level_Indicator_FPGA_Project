@@ -1,0 +1,30 @@
+pune valorile de la axe pe led-uri si vezi ce iti da
+
+verifica valoare maxima pentru x dreapta si x stanga
+asa si pentru y
+
+dupa fa modulul cu valorile gasite
+
+
+axe
+y: -spre mine e pozitiva valoarea
+	 -partea opuas negativa
+	 
+x: -spre stanga e pozitiva valoarea
+	 =spre dreapta e negativa
+	 
+1)Afla range-ul de la + la -
+axa x:
+range/6
+
+axa y:
+range/2
+
+RANGE X: (+)(01_0000_0000(90 grade))		(-)(11_0000_0010 (-90 grade))  
+RANGE Y: (+)(00_1111_0000(90 grade))		(-)(10_1111_0010(=90 grade)
+
+RANGE X: +256 -254 (256 - (-254) = 510)
+RANGE Y: +240 -270 (240 + 270 = 510)
+
+Pentru X -> 510/6 = 85
+Pentru Y -> 510/2 = 255
